@@ -6,8 +6,23 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication3
 {
-    class List
+    class List<T>
     {
+        Element<T> head;
 
+        internal Element<T> Head
+        {
+            get { return head; }
+            set { head = value; }
+        }
+        public List()
+        {
+
+        }
+        public void addfirst(Element<T> e)
+        {
+            e.Next = head;
+            this.head = e;
+        }
     }
 }
